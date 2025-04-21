@@ -1,0 +1,271 @@
+.notes-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fdeded; 
+    position: relative;
+    
+    min-height: 750px;
+    min-width: 1700px;
+    width: 90%;
+    margin: 0 auto;
+    
+    overflow: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.notes-content::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #e0e0e0; 
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.content-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Mensaje cuando no hay notas */
+.no-notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.no-notes p {
+    margin: 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.help-text {
+    font-size: 14px;
+    color: #6e6e6e;
+    max-width: 250px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.add-note-button {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #e63946;
+    color: white;
+    font-size: 28px;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* Estilos para las notas agrupadas por fecha */
+.notes-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.date-group {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.date-header {
+    font-size: 19px;
+    font-weight: 500;
+    color: #040404;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #DC2626;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+/* Estilo de las tarjetas de notas */
+.note-card {
+    background-color: #000;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.note-subject {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.note-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-button, .delete-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 2px;
+}
+
+.note-description {
+    background-color: white;
+    color: #333;
+    padding: 16px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.note-time {
+    background-color: white;
+    color: #777;
+    padding: 0 16px 16px;
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Modal para agregar nota */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.add-note-modal {
+    background-color: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+    padding: 0;
+    line-height: 1;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 15px;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 20px;
+    gap: 10px;
+}
+
+.cancel-button,
+.save-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.save-button {
+    background-color: #e63946;
+    border: none;
+    color: white;
+}

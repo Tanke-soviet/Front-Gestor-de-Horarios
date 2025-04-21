@@ -1,0 +1,152 @@
+.register-page {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background-color: #8B0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.register-container {
+  width: 900px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+}
+
+.register-form {
+  width: 450px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form h1 {
+  color: rgba(210, 17, 22, 1);
+  font-size: 31px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #666;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: rgba(210, 17, 22, 0.5);
+  box-shadow: 0 0 0 2px rgba(210, 17, 22, 0.1);
+}
+
+.btn-primary {
+  width: 100%;
+  height: 42px;
+  background: rgba(210, 17, 22, 1);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background: rgba(180, 15, 20, 1);
+}
+
+.banner {
+  width: 450px;
+  height: 600px;
+  background: rgba(210, 17, 22, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 39px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.btn-outline {
+  width: 159px;
+  height: 45px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 950px) {
+  .register-container {
+      width: 90%;
+      flex-direction: column;
+      height: auto;
+  }
+  
+  .banner, .register-form {
+      width: 100%;
+  }
+  
+  .banner {
+      padding: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .register-page {
+      padding: 20px;
+  }
+  
+  .register-container {
+      border-radius: 10px;
+  }
+  
+  .banner h2 {
+      font-size: 32px;
+  }
+  
+  .register-form h1 {
+      font-size: 28px;
+  }
+}

@@ -1,0 +1,114 @@
+/* header.css */
+.app-header {
+  background-color: white;
+  padding: 30px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: padding-left 0.3s ease;
+}
+
+.app-header.sidebar-open {
+  padding-left: 280px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  max-width: 2000px;
+  margin: 0 auto;
+  height: 56px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-right: 16px;
+}
+
+.logo-container {
+  display: flex;
+  top: 15px;
+}
+
+.logoheader {
+  height: 90px;
+  max-width: 100%;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.notification-container {
+  position: relative;
+}
+
+.notification-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #e53935;
+  border-radius: 50%;
+}
+
+.more-options {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-header.sidebar-open {
+      padding-left: 0;
+  }
+  
+  .logoheader {
+      height: 32px;
+  }
+}
+
+/* White background variant for main content area */
+.content-header {
+  background-color: white;
+  border-radius: 16px 16px 0 0;
+  padding: 16px;
+  margin-top: 16px;
+}

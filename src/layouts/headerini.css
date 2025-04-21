@@ -1,0 +1,31 @@
+/* headerini.css */
+.app-headerini {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+  
+  /* Cuando el sidebar está abierto */
+  .app-headerini.sidebar-open {
+    left: 180px; /* Ajusta este valor al ancho exacto de tu sidebar */
+    width: calc(100% - 180px);
+  }
+  
+  .headerini-container {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  
+  .logo-container {
+    display: block;
+  }
+  
+  .logoheaderini {
+    height: 90px; 
+  }
