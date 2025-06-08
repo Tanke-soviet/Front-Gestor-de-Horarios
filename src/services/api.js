@@ -1,5 +1,4 @@
-const API_URL = "https://gestor-horarios-api.jdav01.duckdns.org";
-
+import { API_URL } from "./baseApi";
 export const testConnection = async () => {
   try {
     console.log("Probando conexión al servidor...");

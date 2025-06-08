@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/login';
 import Schedule from './pages/schedule';
+import Profile from './pages/profile';
 import Calendar from './components/calendar';
 import Notes from './components/notes';
 import Resources from './components/resources';
@@ -35,11 +36,9 @@ function App() {
           <Nav>
             <Resources />
           </Nav>
-        } />
-
-        <Route path="/perfil" element={
+        } />        <Route path="/perfil" element={
           <Nav>
-            <div>Contenido de Perfil</div>
+            <Profile />
           </Nav>
         } />
 
