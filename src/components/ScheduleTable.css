@@ -1,0 +1,211 @@
+.schedule-table-container {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.schedule-table-title {
+  color: #e31837;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.schedule-table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  background-color: white;
+  font-size: 0.85rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  vertical-align: top;
+}
+
+.time-header,
+.day-header {
+  background-color: #e31837;
+  color: white;
+  padding: 12px 8px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.time-header {
+  width: 100px;
+  min-width: 100px;
+}
+
+.day-header {
+  width: calc((100% - 100px) / 7);
+  min-width: 120px;
+}
+
+.time-row {
+  height: 80px;
+}
+
+.time-cell {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+  padding: 8px;
+  border-right: 2px solid #e31837;
+  position: sticky;
+  left: 0;
+  z-index: 0;
+}
+
+.session-cell {
+  padding: 4px;
+  height: 80px;
+  position: relative;
+}
+
+.session-block {
+  background: linear-gradient(135deg, #e31837, #c41230);
+  color: white;
+  border-radius: 6px;
+  padding: 6px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(227, 24, 55, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.session-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(227, 24, 55, 0.4);
+}
+
+.subject-name {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.session-details {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  line-height: 1.1;
+}
+
+.time-range {
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.location {
+  margin-bottom: 2px;
+  font-style: italic;
+}
+
+.professor {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.additional-info {
+  margin-top: 2px;
+}
+
+.period {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.empty-cell {
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.loading-message,
+.empty-schedule {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+.empty-schedule {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #e0e0e0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .schedule-table {
+    min-width: 700px;
+    font-size: 0.75rem;
+  }
+  
+  .time-header,
+  .day-header {
+    padding: 8px 4px;
+    font-size: 0.8rem;
+  }
+  
+  .time-row {
+    height: 70px;
+  }
+  
+  .session-block {
+    padding: 4px;
+  }
+  
+  .subject-name {
+    font-size: 0.8rem;
+  }
+  
+  .session-details {
+    font-size: 0.7rem;
+  }
+  
+  .professor {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule-table-container {
+    margin: 1rem -1rem;
+  }
+  
+  .schedule-table {
+    min-width: 600px;
+    font-size: 0.7rem;
+  }
+  
+  .day-header {
+    min-width: 80px;
+  }
+  
+  .time-header {
+    width: 80px;
+    min-width: 80px;
+  }
+  
+  .time-row {
+    height: 60px;
+  }
+}
