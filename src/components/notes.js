@@ -55,6 +55,8 @@ const Notes = () => {
       setError(null);
       const subjectsData = await loadAvailableSubjects();
       const notesData = await loadNotes(subjectsData);
+      console.log(notesData, subjectsData);
+      
       // Cargar notas y materias disponibles en paralelo
       
     } catch (error) {
@@ -115,7 +117,7 @@ const Notes = () => {
   const getSubjectNameById = (subjectsData, userSubjectId) => {
     console.log(userSubjectId);
 
-    const subject = subjectsData.find(
+    const subject = subjectsData && subjectsData.find(
       (s) => s.id_usuario_materia === userSubjectId
     );
     console.log(subjectsData, subject);
@@ -199,7 +201,7 @@ const Notes = () => {
       }
 
       // Recargar notas y cerrar modal
-      await loadNotes();
+      await loadNotes(availableSubjects);
       handleCloseModal();
     } catch (error) {
       console.error("Error saving note:", error);
