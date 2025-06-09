@@ -1,5 +1,6 @@
 // Base API service with common functionality
-const API_URL = "https://gestor-horarios-api.jdav01.duckdns.org";
+const API_URL = "https://gestor-horarios-api.188-34-193-174.traefik.me";
+//const API_URL = "https://gestor-horarios-api.jdav01.duckdns.org";
 //const API_URL = "http://127.0.0.1:8000"
 // Helper function to get auth headers
 export const getAuthHeaders = () => {
