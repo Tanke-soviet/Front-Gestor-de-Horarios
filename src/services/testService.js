@@ -1,4 +1,4 @@
-import { apiRequest } from './baseApi';
+import { apiRequest, API_URL } from './baseApi';
 import { loginAPI } from './authServices';
 
 // Test connection to all API endpoints
@@ -21,7 +21,7 @@ export const testAllEndpoints = async (testCredentials = null) => {
   try {
     // Test base connection
     console.log('Testing base connection...');
-    await fetch('http://127.0.0.1:8000/');
+    await fetch(API_URL);
     results.baseConnection = true;
     console.log('✓ Base connection successful');
   } catch (error) {

@@ -1,4 +1,4 @@
-import { apiRequest } from './baseApi';
+import { apiRequest, API_URL } from './baseApi';
 
 // Authentication API functions
 export const loginAPI = async (email, password) => {
@@ -7,7 +7,7 @@ export const loginAPI = async (email, password) => {
     formData.append('username', email);
     formData.append('password', password);
     
-    const response = await fetch(`http://127.0.0.1:8000/auth/token`, {
+    const response = await fetch(`${API_URL}/auth/token`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
